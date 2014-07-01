@@ -28,9 +28,15 @@ server.pack.register({
 options is an object with these keys:
 ```
 home: root folder of the less files. mandatory.
-route: the hapi route to bind to, must have a {filename*} somewhere. optional, default: '/styles/'.
-less: parameter to pass to less. optional.
+route: the hapi route to bind to, must have a {filename*} somewhere. optional, defaults to '/styles/'.
+less: parameters to pass to less. optional.
 ```
+
+If you want to print errors to console, then create the server like this:
+```javascript
+var server = new Hapi.Server('localhost', 8080, {debug: {request: ['hapi-less']}});
+```
+hapi-less logs all errors under the 'hapi-less' and 'error' tags.
 
 ## License
 
