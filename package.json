@@ -1,0 +1,27 @@
+{
+	"version": "0.0.2",
+	"name": "hapi-less",
+    "description": "A LessCSS plugin for hapijs",
+        "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://raw.github.com/asafyish/connect-cassandra-cql/master/LICENSE"
+        }
+    ],
+    "author": {
+        "name": "Asaf Yishai",
+        "url": "https://github.com/asafyish"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/asafyish/hapi-less.git"
+    },
+	"dependencies": {
+		"less": "1.7.3"
+	},
+    "keywords": ["hapi", "hapijs", "css", "less", "lesscss", "plugin"],
+	"main": "./index",
+	"engines": {
+		"node": ">=0.10.0"
+	}
+}
