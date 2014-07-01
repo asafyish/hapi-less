@@ -12,20 +12,24 @@ server.pack.register({
 	plugin: require('hapi-less'),
 	options: {
 		home: __dirname + '/../app/styles',
-		route: '/styles/{filename*}'
+		route: '/styles/{filename*}',
+	    less: {
+		    compress: true
+		}
 	}
 }, function (err) {
 
 	if (err) {
-		console.log('Failed loading plugin');
+		console.log('Failed loading hapi-less');
 	}
 });
 ```
 
-config is an object with these keys:
+options is an object with these keys:
 ```
 home: root folder of the less files. mandatory.
-route: the hapi route to bind to, must have a {filename*} somewhere. mandatory.
+route: the hapi route to bind to, must have a {filename*} somewhere. optional, default: '/styles/'.
+less: parameter to pass to less. optional.
 ```
 
 ## License
