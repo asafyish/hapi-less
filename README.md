@@ -28,7 +28,7 @@ server.pack.register({
 options is an object with these keys:
 ```
 home: root folder of the less files. mandatory.
-route: the hapi route to bind to, must have a {filename*} somewhere. optional, defaults to '/styles/'.
+route: hapi route to bind, must have a {filename*} somewhere. optional, defaults to '/styles/{filename*}'.
 less: parameters to pass to less. optional.
 ```
 
