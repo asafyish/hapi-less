@@ -1,5 +1,5 @@
 {
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"name": "hapi-less",
     "description": "A LessCSS plugin for hapijs",
         "licenses": [
@@ -19,6 +19,9 @@
 	"dependencies": {
 		"less": "1.7.3"
 	},
+	"peerDependencies": {
+    	"hapi": ">=5.0.0"
+    },
     "keywords": ["hapi", "hapijs", "css", "less", "lesscss", "plugin"],
 	"main": "./index",
 	"engines": {
