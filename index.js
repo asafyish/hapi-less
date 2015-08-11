@@ -5,11 +5,13 @@ var path = require('path');
 exports.register = function (plugin, options, next) {
     var route = options.route || '/styles/{filename*}';
     var home = path.normalize(options.home);
+    var config = options.config || {};
 
     plugin.route([
         {
             method: 'GET',
             path: route,
+            config: config,
             handler: function (request, reply) {
                 var filename = path.normalize(home + '/' + request.params.filename);
                 fs.exists(filename, function (exists) {
